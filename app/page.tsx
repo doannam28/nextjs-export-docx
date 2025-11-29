@@ -20,6 +20,15 @@ export default function ExportDocx() {
       styles: {
         default: {
           document: {
+            paragraph: {
+              spacing: {
+                before: 60, // 60 twip ≈ 0.04 inch
+                after: 60, // 60 twip ≈ 0.04 inch
+                line: 276, // 1.15 dòng với font 12pt
+                lineRule: "exact",
+              },
+              alignment: AlignmentType.LEFT, // alignment mặc định
+            },
             run: {
               font: "Times New Roman", // <====== FONT MẶC ĐỊNH
               size: 24, // 12pt (mặc định)
@@ -40,7 +49,7 @@ export default function ExportDocx() {
                 top: 1440, // 1 inch = 1440 twip
                 right: 720, // 0.5 inch
                 bottom: 1440,
-                left: 720,
+                left: 1440,
               },
             },
           },
@@ -66,6 +75,9 @@ export default function ExportDocx() {
                   size: 28,
                 }),
               ],
+              spacing: {
+                before: 200,
+              },
             }),
             new Paragraph({
               alignment: AlignmentType.CENTER,
@@ -106,6 +118,7 @@ export default function ExportDocx() {
                 new TextRun({
                   text: "DANH SÁCH",
                   bold: true,
+                  size: 28,
                 }),
               ],
             }),
@@ -115,6 +128,7 @@ export default function ExportDocx() {
                 new TextRun({
                   text: "HÀNH KHÁCH VẬN TẢI ĐƯỜNG THỦY NỘI ĐỊA",
                   bold: true,
+                  size: 28,
                 }),
               ],
             }),
@@ -194,7 +208,8 @@ export default function ExportDocx() {
 
             // 📋 Bảng hành khách
             new Table({
-              width: { size: 11906 - 720 - 720, type: WidthType.DXA },
+              width: { size: 11906 - 1440 - 720, type: WidthType.DXA },
+              columnWidths: [1000, 4000, 1500, 1500, 2000, 2000],
               rows: [
                 new TableRow({
                   children: [
@@ -214,6 +229,108 @@ export default function ExportDocx() {
                     cell("Nam"),
                     cell("Việt Nam"),
                     cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(""),
+                  ],
+                }),
+                new TableRow({
+                  children: [
+                    cell("2"),
+                    cell("Trần Thị B"),
+                    cell("1992"),
+                    cell("Nữ"),
+                    cell("Việt Nam"),
+                    cell(
+                      "Trần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị B"
+                    ),
                   ],
                 }),
                 new TableRow({
@@ -332,7 +449,7 @@ export default function ExportDocx() {
     function cell(text: string, header = false, width?: number) {
       return new TableCell({
         width: width
-          ? { size: width, type: WidthType.PERCENTAGE } // dùng %
+          ? { size: width, type: WidthType.DXA } // dùng DXA luôn
           : undefined,
         verticalAlign: "center",
         children: [
