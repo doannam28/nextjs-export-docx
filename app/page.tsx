@@ -211,138 +211,155 @@ export default function ExportDocx() {
               width: { size: 11906 - 1440 - 720, type: WidthType.DXA },
               columnWidths: [1000, 4000, 1500, 1500, 2000, 2000],
               rows: [
-                new TableRow({
-                  children: [
-                    cell("STT", true, 1000), // ~0.7 inch
-                    cell("Họ và tên", true, 4000), // ~2.8 inch
-                    cell("Năm sinh (tuổi)", true, 1500),
-                    cell("Nam/Nữ", true, 1500),
-                    cell("Quốc tịch", true, 2000),
-                    cell("Ghi chú", true, 2000),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("1"),
-                    cell("Nguyễn Văn A"),
-                    cell("1990"),
-                    cell("Nam"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(
-                      "Trần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị B"
-                    ),
-                  ],
-                }),
-                new TableRow({
-                  children: [
-                    cell("2"),
-                    cell("Trần Thị B"),
-                    cell("1992"),
-                    cell("Nữ"),
-                    cell("Việt Nam"),
-                    cell(""),
-                  ],
-                }),
+                row([
+                  cell("STT", true, 800),
+                  cell("Họ và tên", true, 3500),
+                  cell("Năm sinh", true, 1300),
+                  cell("Nam/Nữ", true, 1100),
+                  cell("Quốc tịch", true, 1500),
+                  cell("Ghi chú", true, 2200),
+                ]),
+
+                row([
+                  cell("1"),
+                  cell("Nguyễn Văn A"),
+                  cell("1990"),
+                  cell("Nam"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+
+                row([
+                  cell("12"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(
+                    "Trần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị BTrần Thị B"
+                  ),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
+                row([
+                  cell("2"),
+                  cell("Trần Thị B"),
+                  cell("1992"),
+                  cell("Nữ"),
+                  cell("Việt Nam"),
+                  cell(""),
+                ]),
               ],
             }),
 
@@ -463,7 +480,12 @@ export default function ExportDocx() {
     const blob = await Packer.toBlob(doc);
     saveAs(blob, "danh_sach_hanh_khach.docx");
   };
-
+  function row(children: TableCell[]) {
+    return new TableRow({
+      cantSplit: true,
+      children,
+    });
+  }
   return (
     <button
       onClick={exportDoc}
